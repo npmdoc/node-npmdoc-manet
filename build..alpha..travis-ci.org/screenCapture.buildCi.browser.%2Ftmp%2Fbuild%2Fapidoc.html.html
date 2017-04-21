@@ -1,0 +1,1073 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/vbauer/manet">manet (v0.4.19)</a>
+</h1>
+<h4>Website screenshot service powered by Node.js, SlimerJS and PhantomJS</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.manet">module manet</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan"></span>manet</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">manet.</span>capture</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">manet.</span>config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">manet.</span>filters</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">manet.</span>options</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">manet.</span>routes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">manet.</span>utils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.manet.capture">module manet.capture</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.capture.screenshot">
+            function <span class="apidocSignatureSpan">manet.capture.</span>screenshot
+            <span class="apidocSignatureSpan">(options, config, onFinish)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.manet.config">module manet.config</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.config.createSchema">
+            function <span class="apidocSignatureSpan">manet.config.</span>createSchema
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.config.read">
+            function <span class="apidocSignatureSpan">manet.config.</span>read
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.manet.filters">module manet.filters</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.filters.basic">
+            function <span class="apidocSignatureSpan">manet.filters.</span>basic
+            <span class="apidocSignatureSpan">(conf)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.filters.configureWebSecurity">
+            function <span class="apidocSignatureSpan">manet.filters.</span>configureWebSecurity
+            <span class="apidocSignatureSpan">(conf)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.filters.merge">
+            function <span class="apidocSignatureSpan">manet.filters.</span>merge
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.filters.usage">
+            function <span class="apidocSignatureSpan">manet.filters.</span>usage
+            <span class="apidocSignatureSpan">(conf)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.manet.manet">module manet.manet</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.manet.main">
+            function <span class="apidocSignatureSpan">manet.manet.</span>main
+            <span class="apidocSignatureSpan">(onStart)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.manet.options">module manet.options</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.options.createSchema">
+            function <span class="apidocSignatureSpan">manet.options.</span>createSchema
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.options.readOptions">
+            function <span class="apidocSignatureSpan">manet.options.</span>readOptions
+            <span class="apidocSignatureSpan">(data, schema)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.manet.routes">module manet.routes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.routes.index">
+            function <span class="apidocSignatureSpan">manet.routes.</span>index
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.manet.utils">module manet.utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.utils.encodeBase64">
+            function <span class="apidocSignatureSpan">manet.utils.</span>encodeBase64
+            <span class="apidocSignatureSpan">(json)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.utils.execProcess">
+            function <span class="apidocSignatureSpan">manet.utils.</span>execProcess
+            <span class="apidocSignatureSpan">(command, options, onClose)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.utils.filePath">
+            function <span class="apidocSignatureSpan">manet.utils.</span>filePath
+            <span class="apidocSignatureSpan">(file, dir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.utils.fixUrl">
+            function <span class="apidocSignatureSpan">manet.utils.</span>fixUrl
+            <span class="apidocSignatureSpan">(url)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.utils.runFsWatchdog">
+            function <span class="apidocSignatureSpan">manet.utils.</span>runFsWatchdog
+            <span class="apidocSignatureSpan">(dir, timeout, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.manet.utils.validate">
+            function <span class="apidocSignatureSpan">manet.utils.</span>validate
+            <span class="apidocSignatureSpan">(object, schema)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.manet" id="apidoc.module.manet">module manet</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.manet.capture" id="apidoc.module.manet.capture">module manet.capture</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.manet.capture.screenshot" id="apidoc.element.manet.capture.screenshot">
+        function <span class="apidocSignatureSpan">manet.capture.</span>screenshot
+        <span class="apidocSignatureSpan">(options, config, onFinish)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function screenshot(options, config, onFinish) {
+    const conf = createConfig(options, config),
+          opts = createOptions(options, config),
+          base64 = utils.encodeBase64(opts),
+          file = outputFile(opts, conf),
+
+          retrieveImageFromStorage = () =&gt; {
+              logger.debug('Take screenshot from file storage: %s', base64);
+              onFinish(file);
+          },
+          retrieveImageFromSite = () =&gt; {
+              runCapturingProcess(opts, conf, file, base64, (error) =&gt; {
+                  logger.debug('Process finished work: %s', base64);
+                  return onFinish(file, error);
+              });
+          };
+
+    logger.info('Capture site screenshot: "%s"', options.url);
+
+    if (options.force || !conf.cache) {
+        retrieveImageFromSite();
+    } else {
+        fs.exists(file, (exists) =&gt;
+            exists ? retrieveImageFromStorage() : retrieveImageFromSite());
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        if (callbackUrl) {
+            res.json(message(util.format(
+                'Data file will be sent to "%s" when processed', callbackUrl
+                )));
+
+            logger.debug('Streaming (\"%s\") to \"%s\"', siteUrl, callbackUrl);
+
+            capture.<span class="apidocCodeKeywordSpan">screenshot</span>(options, config, sendImageToUrl(res, config, options));
+        } else {
+            logger.debug('Sending file (\"%s\") in response', siteUrl);
+            capture.screenshot(options, config, sendImageInResponse(res, config, options));
+        }
+    }
+
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.manet.config" id="apidoc.module.manet.config">module manet.config</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.manet.config.createSchema" id="apidoc.element.manet.config.createSchema">
+        function <span class="apidocSignatureSpan">manet.config.</span>createSchema
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createSchema() {
+    return joi.object().keys({
+        host: joi
+            .string()
+            .label('Webserver host'),
+        port: joi
+            .number()
+            .integer()
+            .min(1)
+            .max(65535)
+            .label('Webserver port number'),
+        cors: joi
+            .boolean()
+            .label('Enable CORS'),
+        ui: joi
+            .boolean()
+            .label('Enable sandbox UI'),
+        silent: joi
+            .boolean()
+            .label('Enable silent mode'),
+        level: joi
+            .string()
+            .lowercase()
+            .valid('silly', 'debug', 'verbose', 'info', 'warn', 'error')
+            .label('Logging level'),
+        engine: joi
+            .string()
+            .lowercase()
+            .valid('phantomjs', 'slimerjs')
+            .label('Default engine'),
+        timeout: joi
+            .number()
+            .integer()
+            .min(1)
+            .label('Timeout'),
+        options: joi
+            .object()
+            .default({})
+            .label('Engine default options'),
+        command: joi
+            .string()
+            .label('Command to run screenshot capturing'),
+        storage: joi
+            .string()
+            .label('Storage path'),
+        cache: joi
+            .number()
+            .integer()
+            .label('Cache life time'),
+        cleanupStartup: joi
+            .boolean()
+            .label('Cleanup storage at startup'),
+        cleanupRuntime: joi
+            .boolean()
+            .label('Cleanup storage after sending image'),
+        compress: joi
+            .boolean()
+            .label('Compress screenshots'),
+        whitelist: joi
+            .array()
+            .default([])
+            .label('List of allowed sites (RegExps)')
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+
+/* Controller */
+
+function index(config) {
+    return (req, res) =&gt; {
+const schema = opt.<span class="apidocCodeKeywordSpan">createSchema</span>(),
+      data = utils.validate(req.data, schema);
+
+if (data.error) {
+    res.json(error(data.error.details));
+} else {
+    const options = opt.readOptions(data.value, schema),
+          siteUrl = options.url;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.manet.config.read" id="apidoc.element.manet.config.read">
+        function <span class="apidocSignatureSpan">manet.config.</span>read
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function read() {
+    const val = utils.validate(load(), createSchema()),
+          err = val.error;
+
+    if (err) {
+        err.details.forEach((detail) =&gt; logger.error(detail.message));
+        process.exit(1);
+    }
+    return val.value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+logger.info('Manet server started on %s:%d', host, port);
+}
+
+
+/* Initialize and run server */
+
+function main(onStart) {
+const conf = config.<span class="apidocCodeKeywordSpan">read</span>();
+
+initLogging(conf);
+initExitHandling();
+initFsStorage(conf);
+
+logger.debug('Default configuration file: %s', conf.path);
+logger.debug('Configuration parameters: %s', JSON.stringify(conf));
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.manet.filters" id="apidoc.module.manet.filters">module manet.filters</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.manet.filters.basic" id="apidoc.element.manet.filters.basic">
+        function <span class="apidocSignatureSpan">manet.filters.</span>basic
+        <span class="apidocSignatureSpan">(conf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function basic(conf) {
+    const creds = getBasic(conf);
+    return creds ? passport.authenticate('basic', { session: false }) : null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function createWebApplication(conf) {
+const app = express(),
+      index = routes.index(conf),
+      urlencoded = bodyParser.urlencoded({ extended: false }),
+      json = bodyParser.json(),
+      noCache = nocache(),
+      basic = filters.<span class="apidocCodeKeywordSpan">basic</span>(conf),
+      usage = filters.usage(conf),
+      merge = filters.merge,
+      notNull = (f) =&gt; _.without(f, null);
+
+filters.configureWebSecurity(conf);
+
+app.use(express.static(utils.filePath('../public')));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.manet.filters.configureWebSecurity" id="apidoc.element.manet.filters.configureWebSecurity">
+        function <span class="apidocSignatureSpan">manet.filters.</span>configureWebSecurity
+        <span class="apidocSignatureSpan">(conf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function configureWebSecurity(conf) {
+    const creds = getBasic(conf);
+    if (creds) {
+        passport.use(new passportHttp.BasicStrategy((username, password, done) =&gt; {
+            const name = creds.username,
+                  passwd = creds.password,
+                  correct = name === username &amp;&amp; passwd === password;
+            done(null, correct ? basic : false);
+        }));
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      json = bodyParser.json(),
+      noCache = nocache(),
+      basic = filters.basic(conf),
+      usage = filters.usage(conf),
+      merge = filters.merge,
+      notNull = (f) =&gt; _.without(f, null);
+
+filters.<span class="apidocCodeKeywordSpan">configureWebSecurity</span>(conf);
+
+app.use(express.static(utils.filePath('../public')));
+app.use(passport.initialize());
+
+app.get('/', notNull([noCache, basic, merge, usage]), index);
+app.post('/', notNull([noCache, basic, urlencoded, json, merge, usage]), index);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.manet.filters.merge" id="apidoc.element.manet.filters.merge">
+        function <span class="apidocSignatureSpan">manet.filters.</span>merge
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function merge(req, res, next) {
+    const query = req.query || {},
+          body = req.body || {};
+
+    logger.debug('Request query parameters: %s', JSON.stringify(query));
+    logger.debug('Request body parameters: %s', JSON.stringify(body));
+
+    req.data = _.defaults(query, body);
+    return next();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.manet.filters.usage" id="apidoc.element.manet.filters.usage">
+        function <span class="apidocSignatureSpan">manet.filters.</span>usage
+        <span class="apidocSignatureSpan">(conf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function usage(conf) {
+    if (conf.ui) {
+        return (req, res, next) =&gt;
+            !req.data.url ? res.sendFile(utils.filePath('../public/usage.html')) : next();
+    }
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function createWebApplication(conf) {
+const app = express(),
+      index = routes.index(conf),
+      urlencoded = bodyParser.urlencoded({ extended: false }),
+      json = bodyParser.json(),
+      noCache = nocache(),
+      basic = filters.basic(conf),
+      usage = filters.<span class="apidocCodeKeywordSpan">usage</span>(conf),
+      merge = filters.merge,
+      notNull = (f) =&gt; _.without(f, null);
+
+filters.configureWebSecurity(conf);
+
+app.use(express.static(utils.filePath('../public')));
+app.use(passport.initialize());
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.manet.manet" id="apidoc.module.manet.manet">module manet.manet</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.manet.manet.main" id="apidoc.element.manet.manet.main">
+        function <span class="apidocSignatureSpan">manet.manet.</span>main
+        <span class="apidocSignatureSpan">(onStart)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function main(onStart) {
+    const conf = config.read();
+
+    initLogging(conf);
+    initExitHandling();
+    initFsStorage(conf);
+
+    logger.debug('Default configuration file: %s', conf.path);
+    logger.debug('Configuration parameters: %s', JSON.stringify(conf));
+
+    runWebServer(conf, onStart);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.manet.options" id="apidoc.module.manet.options">module manet.options</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.manet.options.createSchema" id="apidoc.element.manet.options.createSchema">
+        function <span class="apidocSignatureSpan">manet.options.</span>createSchema
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createSchema() {
+    return joi.object().keys({
+        force: joi.boolean(),
+        url: joi.string().trim().required(),
+        agent: joi.string().trim(),
+        headers: joi.string().trim(),
+        delay: joi.number().integer().min(0),
+        format: joi.string().lowercase().trim().valid(
+            'jpeg', 'jpg', 'png', 'html', 'bmp', 'pdf', 'ppm', 'ico'),
+        engine: joi.string().lowercase().trim().valid(
+            'phantomjs', 'slimerjs'),
+        quality: joi.number().min(0).max(1),
+        width: joi.number().integer().min(1),
+        height: joi.number().integer().min(1),
+        paperFormat: joi.string().trim().valid(
+            'letter', 'A2', 'A3', 'A4', 'A5'),
+        paperOrientation: joi.string().lowercase().trim().valid(
+            'portrait', 'landscape'
+        ),
+        clipRect: joi.string().trim().regex(REGEXP_CLIP_RECT),
+        zoom: joi.number().min(0),
+        selector: joi.string().trim(),
+        selectorCrop:joi.boolean(),
+        selectorCropPadding:joi.number().integer(),
+        js: joi.boolean(),
+        images: joi.boolean(),
+        user: joi.string().trim(),
+        password: joi.string().trim(),
+        callback: joi.string().trim(),
+        cookies: joi.array().items(
+            joi.object().keys({
+                name: joi.string().required(),
+                value: joi.string().required(),
+                domain: joi.string(),
+                path: joi.string().required(),
+                httponly: joi.boolean(),
+                secure: joi.boolean(),
+                expires: joi.string()
+            })
+        )
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+
+/* Controller */
+
+function index(config) {
+    return (req, res) =&gt; {
+const schema = opt.<span class="apidocCodeKeywordSpan">createSchema</span>(),
+      data = utils.validate(req.data, schema);
+
+if (data.error) {
+    res.json(error(data.error.details));
+} else {
+    const options = opt.readOptions(data.value, schema),
+          siteUrl = options.url;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.manet.options.readOptions" id="apidoc.element.manet.options.readOptions">
+        function <span class="apidocSignatureSpan">manet.options.</span>readOptions
+        <span class="apidocSignatureSpan">(data, schema)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function readOptions(data, schema) {
+    const keys = _.keys(schema.describe().children),
+          options = _.pick(data, keys);
+
+    options.url = parseUrl(options.url);
+    options.headers = parseHeaders(options.headers);
+    options.clipRect = parseClipRect(options.clipRect);
+
+    return _.omitBy(options, (v) =&gt; _.isUndefined(v) || _.isNull(v));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return (req, res) =&gt; {
+        const schema = opt.createSchema(),
+  data = utils.validate(req.data, schema);
+
+        if (data.error) {
+res.json(error(data.error.details));
+        } else {
+const options = opt.<span class="apidocCodeKeywordSpan">readOptions</span>(data.value, schema),
+      siteUrl = options.url;
+
+if (!isUrlAllowed(config, siteUrl)) {
+    sendError(res, util.format('URL "%s" is not allowed', siteUrl));
+} else {
+    const callbackUrl = options.callback;
+    if (callbackUrl) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.manet.routes" id="apidoc.module.manet.routes">module manet.routes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.manet.routes.index" id="apidoc.element.manet.routes.index">
+        function <span class="apidocSignatureSpan">manet.routes.</span>index
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function index(config) {
+    return (req, res) =&gt; {
+        const schema = opt.createSchema(),
+              data = utils.validate(req.data, schema);
+
+        if (data.error) {
+            res.json(error(data.error.details));
+        } else {
+            const options = opt.readOptions(data.value, schema),
+                  siteUrl = options.url;
+
+            if (!isUrlAllowed(config, siteUrl)) {
+                sendError(res, util.format('URL "%s" is not allowed', siteUrl));
+            } else {
+                const callbackUrl = options.callback;
+                if (callbackUrl) {
+                    res.json(message(util.format(
+                        'Data file will be sent to "%s" when processed', callbackUrl
+                        )));
+
+                    logger.debug('Streaming (\"%s\") to \"%s\"', siteUrl, callbackUrl);
+
+                    capture.screenshot(options, config, sendImageToUrl(res, config, options));
+                } else {
+                    logger.debug('Sending file (\"%s\") in response', siteUrl);
+                    capture.screenshot(options, config, sendImageInResponse(res, config, options));
+                }
+            }
+
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+
+/* Web application */
+
+function createWebApplication(conf) {
+const app = express(),
+      index = routes.<span class="apidocCodeKeywordSpan">index</span>(conf),
+      urlencoded = bodyParser.urlencoded({ extended: false }),
+      json = bodyParser.json(),
+      noCache = nocache(),
+      basic = filters.basic(conf),
+      usage = filters.usage(conf),
+      merge = filters.merge,
+      notNull = (f) =&gt; _.without(f, null);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.manet.utils" id="apidoc.module.manet.utils">module manet.utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.manet.utils.encodeBase64" id="apidoc.element.manet.utils.encodeBase64">
+        function <span class="apidocSignatureSpan">manet.utils.</span>encodeBase64
+        <span class="apidocSignatureSpan">(json)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function encodeBase64(json) {
+    const text = JSON.stringify(json),
+          buffer = new Buffer(text, 'binary');
+
+    return buffer.toString('base64');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+/* External API */
+
+function screenshot(options, config, onFinish) {
+    const conf = createConfig(options, config),
+opts = createOptions(options, config),
+base64 = utils.<span class="apidocCodeKeywordSpan">encodeBase64</span>(opts),
+file = outputFile(opts, conf),
+
+retrieveImageFromStorage = () =&gt; {
+    logger.debug('Take screenshot from file storage: %s', base64);
+    onFinish(file);
+},
+retrieveImageFromSite = () =&gt; {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.manet.utils.execProcess" id="apidoc.element.manet.utils.execProcess">
+        function <span class="apidocSignatureSpan">manet.utils.</span>execProcess
+        <span class="apidocSignatureSpan">(command, options, onClose)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function execProcess(command, options, onClose) {
+    const procStart = process.hrtime(),
+          cmd = command.join(' '),
+          opts = options || {};
+
+    childProcess.exec(cmd, opts, (error, stdout, stderr) =&gt; {
+        const procEnd = process.hrtime(procStart),
+              end = (procEnd[0] + procEnd[1] / 1e9).toFixed(2);
+
+        logger.debug('Process output: %s', stdout);
+        if (error) {
+            logger.error('Process error: %s', stderr);
+        }
+        logger.debug('Execution time: %d sec', end);
+
+        if (onClose) {
+            onClose(error);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+          };
+
+    logger.debug(
+        'Options for script: %s, base64: %s, command: %s',
+        JSON.stringify(options), base64, JSON.stringify(cmd)
+    );
+
+    utils.<span class="apidocCodeKeywordSpan">execProcess</span>(cmd, opts, (error) =&gt; {
+        if (config.compress) {
+            minimizeImage(outputFile, config.storage, () =&gt; onFinish(error));
+        } else {
+            onFinish(error);
+        }
+    });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.manet.utils.filePath" id="apidoc.element.manet.utils.filePath">
+        function <span class="apidocSignatureSpan">manet.utils.</span>filePath
+        <span class="apidocSignatureSpan">(file, dir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function filePath(file, dir) {
+    return path.normalize(path.join(dir || __dirname, file));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+);
+}
+
+
+/* Screenshot capturing runner */
+
+function runCapturingProcess(options, config, outputFile, base64, onFinish) {
+const scriptFile = utils.<span class="apidocCodeKeywordSpan">filePath</span>(SCRIPT_FILE),
+      command = cliCommand(config).split(/[ ]+/),
+      cmd = _.union(command, [scriptFile, base64, outputFile]),
+      opts = {
+          timeout: config.timeout
+      };
+
+logger.debug(
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.manet.utils.fixUrl" id="apidoc.element.manet.utils.fixUrl">
+        function <span class="apidocSignatureSpan">manet.utils.</span>fixUrl
+        <span class="apidocSignatureSpan">(url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fixUrl(url) {
+    if (url) {
+        const http = url.indexOf(URL_PREFIX_HTTP) &gt;= 0,
+              https = url.indexOf(URL_PREFIX_HTTPS) &gt;= 0;
+
+        return (http || https) ? url : (URL_PREFIX_HTTP + url);
+    }
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const engine = config.engine || DEF_ENGINE,
+      command = config.command || config.commands[engine][process.platform];
+return command || DEF_COMMAND;
+}
+
+function createOptions(options, config) {
+const opts = _.omit(options, ['force', 'callback']);
+opts.url = utils.<span class="apidocCodeKeywordSpan">fixUrl</span>(options.url);
+return _.defaults(opts, config.options);
+}
+
+function createConfig(options, config) {
+const conf = _.cloneDeep(config),
+      engine = options.engine;
+conf.engine = engine || conf.engine;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.manet.utils.runFsWatchdog" id="apidoc.element.manet.utils.runFsWatchdog">
+        function <span class="apidocSignatureSpan">manet.utils.</span>runFsWatchdog
+        <span class="apidocSignatureSpan">(dir, timeout, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runFsWatchdog(dir, timeout, callback) {
+    if (dir &amp;&amp; (timeout &gt; 0)) {
+        logger.info('Initialize FS watchdog: directory: %s, timeout: %dms', dir, timeout);
+
+        return setInterval(() =&gt; {
+            fs.readdir(dir, (err, files) =&gt; {
+                if (err) {
+                    logger.warn(err);
+                } else {
+                    files.forEach((file) =&gt;
+                        processOldFile(path.join(dir, file), timeout, callback));
+                }
+            });
+        }, timeout);
+    }
+    return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+}
+
+function initFsWatchdog(conf) {
+const timeout = conf.cache * 1000,
+      dir = conf.storage;
+
+utils.<span class="apidocCodeKeywordSpan">runFsWatchdog</span>(dir, timeout, (file) =&gt; {
+    fs.unlink(file, (err) =&gt; {
+        if (err) {
+            logger.debug('Can not delete file "%s": %s', file, err);
+        } else {
+            logger.info('Deleted file "%s"', file);
+        }
+    });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.manet.utils.validate" id="apidoc.element.manet.utils.validate">
+        function <span class="apidocSignatureSpan">manet.utils.</span>validate
+        <span class="apidocSignatureSpan">(object, schema)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validate(object, schema) {
+    return joi.validate(object, schema, SCHEMA_CONFIG);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+config.port = config.port || cloudEnv.get(ENV_PORT);
+config.path = confPath;
+
+return config;
+}
+
+function read() {
+const val = utils.<span class="apidocCodeKeywordSpan">validate</span>(load(), createSchema()),
+      err = val.error;
+
+if (err) {
+    err.details.forEach((detail) =&gt; logger.error(detail.message));
+    process.exit(1);
+}
+return val.value;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
